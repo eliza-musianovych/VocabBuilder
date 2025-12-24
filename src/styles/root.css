@@ -1,0 +1,20 @@
+:root {
+  --font-family: 'MacPawFixelDisplay';
+  --second-family: 'SF-Pro-Display';
+  
+
+  --black: #121417;
+  --green: #85AA9F;
+  --white-1: #F8F8F8;
+  --white: #F8F8F8;
+  
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
