@@ -6,7 +6,7 @@ import {
 
 import AutorizationPage from './components/AutorizationPage/AutorizationPage';
 
-function App() {
+async function App() {
   return (
     <>
       <header>
@@ -18,7 +18,7 @@ function App() {
             <use href='/public/sprite.svg#icon-Craftwork' />
           </svg>
           <p>VocabBuilder</p>
-        </div>
+        </div> 
       </header>
     
       <main>
@@ -29,6 +29,6 @@ function App() {
       </main>
     </>
   )
-}
+};
 
-export default App
+export default App;
