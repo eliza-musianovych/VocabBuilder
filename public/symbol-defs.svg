@@ -1,0 +1,12 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Nav" viewBox="0 0 47 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M8.537 5.333h36.553"></path>
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M8.537 24.727h36.553"></path>
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.9091" d="M19.668 15.030h25.423"></path>
+</symbol>
+<symbol id="icon-gridicons_user" viewBox="0 0 32 32">
+<path fill="#fcfcfc" style="fill: var(--color1, #fcfcfc)" opacity="0.7" d="M15.998 5.333c1.415 0 2.771 0.562 3.771 1.562s1.562 2.357 1.562 3.771c0 1.414-0.562 2.771-1.562 3.771s-2.357 1.562-3.771 1.562c-1.414 0-2.771-0.562-3.771-1.562s-1.562-2.357-1.562-3.771c0-1.415 0.562-2.771 1.562-3.771s2.357-1.562 3.771-1.562zM15.998 26.667c0 0 10.667 0 10.667-2.667 0-3.2-5.2-6.667-10.667-6.667s-10.667 3.467-10.667 6.667c0 2.667 10.667 2.667 10.667 2.667z"></path>
+</symbol>
+</defs>
+</svg>

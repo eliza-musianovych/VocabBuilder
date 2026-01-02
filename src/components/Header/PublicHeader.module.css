@@ -1,13 +1,17 @@
-.logo {
-    margin: 24px 100px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+.header {
+    padding-top: 16px;
+    padding-left: 16px;
 }
 
-.logoText {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 145%;
-    color: var(--black);
+@media screen and (min-width: 768px) {
+    .header {
+        padding-top: 24px;
+        padding-left: 32px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .header {
+        padding-left: 100px;
+    }
 }

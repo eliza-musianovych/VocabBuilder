@@ -3,28 +3,23 @@ import {
   Route,
   Navigate
 } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
-import AutorizationPage from './components/AutorizationPage/AutorizationPage';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Header from './components/Header/Header';
 
-async function App() {
+function App() {
   return (
     <>
-      <header>
-        <div>
-          <svg
-          width={40}
-          height={40}
-          >
-            <use href='/public/sprite.svg#icon-Craftwork' />
-          </svg>
-          <p>VocabBuilder</p>
-        </div> 
-      </header>
+    <Toaster position='top-right'/>
+      <Header />
     
       <main>
         <Routes>
           <Route path='/' element={<Navigate to='/register' replace />} />
-          <Route path='/login' element={<AutorizationPage />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </main>
     </>

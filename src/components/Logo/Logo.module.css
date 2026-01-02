@@ -1,0 +1,30 @@
+.logo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+}
+
+.logoText {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 145%;
+    color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        margin-left: 100px;
+    }
+}
