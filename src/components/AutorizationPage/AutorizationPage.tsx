@@ -4,14 +4,18 @@ import LoginForm from "../Form/LoginForm";
 import RegisterForm from "../Form/RegisterForm";
 import clsx from 'clsx';
 
-export default function AutorizationPage ({ type }: { type: 'register' | 'login' }) {
+type AutorizationPageProps = {
+    type: 'register' | 'login';
+};
+
+export default function AutorizationPage ({ type }: AutorizationPageProps) {
     return (
-        <section className={css.section}>
+        <main className={css.main}>
             <div className={css.imgContainer}>
                 <img 
                 className={css.img}
-                src="/public/img/illustration.png" 
-                srcSet="/public/img/illustration.png 1x, /public/img/illustrationx2.png 2x"
+                src="/img/illustration.png" 
+                srcSet="/img/illustration.png 1x, /img/illustrationx2.png 2x"
                 alt="illustration" 
                 />
                 <p 
@@ -27,6 +31,6 @@ export default function AutorizationPage ({ type }: { type: 'register' | 'login'
             <LoginForm />
             }
             <div className={css.gradient}></div>
-        </section>
+        </main>
     )
 }

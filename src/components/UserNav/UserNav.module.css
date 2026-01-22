@@ -1,0 +1,55 @@
+.nav {
+    display: none;
+}
+
+.navList {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white);
+}
+
+.navItem {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.menu {
+    color: var(--white);
+}
+
+.active {
+    border-radius: 15px;
+    padding: 12px 20px;
+}
+
+.activeMenu {
+    background: var(--white);
+    color: var(--black);
+}
+
+.nav {
+    justify-self: center;
+}
+
+.headerNav {
+    flex-direction: row;
+    align-items: center;
+}
+
+.header {
+    color: var(--black);
+}
+
+.activeHeader {
+    background: var(--green);
+    color: var(--white);
+}
+
+@media screen and (min-width: 1440px) {
+    .nav {
+        display: block;
+    }
+}

@@ -7,6 +7,7 @@ import {
     type FormikHelpers,
     ErrorMessage
 } from "formik";
+import axios from 'axios';
 import { useId } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from 'react';
@@ -25,7 +26,7 @@ export default function RegisterForm () {
     const [showPassword, setShowPassword] = useState(false);
 
     const initialRegister: RegisterRequest = {
-        username: '',
+        name: '',
         email: '',
         password: '',
     };
@@ -39,10 +40,29 @@ export default function RegisterForm () {
             setUser(user);
             navigate('/dictionary');
             actions.resetForm();
-            } catch {
-                toast.error(
-                    'Something went wrong. Try later'
-                );
+            } catch (error: unknown) {
+                if (axios.isAxiosError(error)) {
+                const status = error.response?.status;
+
+                switch (status) {
+                  case 400:
+                    toast.error('Будь ласка, перевірте введені дані.');
+                    break;
+                  case 401:
+                    toast.error('Невірна електронна пошта або пароль.');
+                    break;
+                  case 409:
+                    toast.error('Користувач з такою електронною поштою вже існує.');
+                    break;
+                  case 500:
+                    toast.error('Сталася помилка на сервері. Спробуйте пізніше.');
+                    break;
+                  default:
+                    toast.error('Щось пішло не так. Спробуйте ще раз.');
+                }
+              } else {
+                toast.error('Невідома помилка.');
+              }
             } finally {
                 actions.setSubmitting(false);
             }
@@ -62,16 +82,16 @@ export default function RegisterForm () {
                     <fieldset className={css.formField}>
                         <Field
                         className={clsx(css.formElement, {
-                                [css.formElementError]: touched.username && errors.username,
-                                [css.formElementSuccess]: touched.username && !errors.username,
+                                [css.formElementError]: touched.name && errors.name,
+                                [css.formElementSuccess]: touched.name && !errors.name,
                             })}
                         type='text'
-                        name='username'
-                        id={`${fieldId}-username`}
+                        name='name'
+                        id={`${fieldId}-name`}
                         placeholder='Name'
                         />
                         <ErrorMessage
-                        name='username'
+                        name='name'
                         >
                             {msg => (
                                 <span className={css.error}>
@@ -80,20 +100,20 @@ export default function RegisterForm () {
                                     width={16}
                                     height={16}
                                     >
-                                        <use href='/public/sprite.svg#icon-error-warning-fill' />
+                                        <use href='/sprite.svg#icon-error-warning-fill' />
                                     </svg>
                                     {msg}
                                 </span>
                             )}
                         </ErrorMessage>
-                        {touched.username && !errors.username && values.username && (
+                        {touched.name && !errors.name && values.name && (
                             <span className={css.success}>
                                 <svg
                                 className={css.messageIcon}
                                 width={16}
                                 height={16}
                                 >
-                                    <use href='/public/sprite.svg#icon-checkbox-circle-fill' />
+                                    <use href='/sprite.svg#icon-checkbox-circle-fill' />
                                 </svg>
                                 Correct name
                             </span>
@@ -119,7 +139,7 @@ export default function RegisterForm () {
                                     width={16}
                                     height={16}
                                     >
-                                        <use href='/public/sprite.svg#icon-error-warning-fill' />
+                                        <use href='/sprite.svg#icon-error-warning-fill' />
                                     </svg>
                                     {msg}
                                 </span>
@@ -132,7 +152,7 @@ export default function RegisterForm () {
                                 width={16}
                                 height={16}
                                 >
-                                    <use href='/public/sprite.svg#icon-checkbox-circle-fill' />
+                                    <use href='/sprite.svg#icon-checkbox-circle-fill' />
                                 </svg>
                                 Correct email
                             </span>
@@ -159,13 +179,13 @@ export default function RegisterForm () {
                                 width={20}
                                 height={20}
                                 >
-                                    <use href='/public/sprite.svg#icon-eye' />
+                                    <use href='/sprite.svg#icon-eye' />
                                 </svg> :
                                 <svg
                                 width={20}
                                 height={20}
                                 >
-                                    <use href='/public/sprite.svg#icon-eye-off' />
+                                    <use href='/sprite.svg#icon-eye-off' />
                                 </svg>}
                             </button>
                         </div>
@@ -179,7 +199,7 @@ export default function RegisterForm () {
                                     width={16}
                                     height={16}
                                     >
-                                        <use href='/public/sprite.svg#icon-error-warning-fill' />
+                                        <use href='/sprite.svg#icon-error-warning-fill' />
                                     </svg>
                                     {msg}
                                 </span>
@@ -192,7 +212,7 @@ export default function RegisterForm () {
                                 width={16}
                                 height={16}
                                 >
-                                    <use href='/public/sprite.svg#icon-checkbox-circle-fill' />
+                                    <use href='/sprite.svg#icon-checkbox-circle-fill' />
                                 </svg>
                                 Success password
                             </span>

@@ -7,5 +7,34 @@
 }
 
 .container {
-    
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.burgerBtn {
+    width: 32px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6.5px;
+    align-items: flex-end;
+}
+
+.burgerBtn span {
+    border: 2px solid var(--black);
+    width: 27px;
+    height: 0px;
+    border-radius: 10px;
+}
+
+.burgerBtn span:nth-child(2) {
+    width: 19px;
+}
+
+@media screen and (min-width: 1440px) {
+    .burgerBtn {
+        display: none;
+    }
 }
