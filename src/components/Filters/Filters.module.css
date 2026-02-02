@@ -1,0 +1,139 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.container {
+    position: relative;
+}
+
+.keyword {
+    border: 1px solid rgba(18, 20, 23, 0.1);
+    border-radius: 15px;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+    width: 100%;
+}
+
+.keyword:hover,
+.keyword:active,
+.keyword:focus {
+    border-color: var(--green);
+    outline: none;
+}
+
+.keyword::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+.icon {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+}
+
+.form :global(.categories__control) {
+    border: 1px solid rgba(18, 20, 23, 0.1);
+    border-radius: 15px;
+    padding: 0 24px;
+    min-height: 48px;
+    background-color: var(--white-1);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+    width: 100%;
+
+    box-shadow: none;
+}
+
+.form :global(.categories__control):hover,
+.form :global(.categories__control):active
+.form :global(.categories__control):focus {
+    border-color: var(--green);
+}
+
+.form :global(.categories__dropdown-indicator) {
+    color: var(--black);
+    padding: 0;
+}
+
+.form :global(.categories__value-container) {
+    padding: 0;
+}
+
+.form :global(.categories__placeholder) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--black);
+}
+
+.form :global(.categories__menu) {
+    border-radius: 15px;
+    width: 311px;
+    height: 240px;
+    box-shadow: 0 4px 47px 0 rgba(18, 20, 23, 0.08);
+    background: #fff;
+    margin: 0;
+    padding: 12px 6px 12px 24px;
+}
+
+.form :global(.categories__menu-list) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form :global(.categories__menu-list::-webkit-scrollbar) {
+    width: 8px;
+}
+
+.form :global(.categories__menu-list::-webkit-scrollbar-track) {
+    background: transparent;
+} 
+
+.form :global(.categories__menu-list::-webkit-scrollbar-thumb) {
+    border-radius: 12px;
+    height: 101px;
+    background: var(--white-1);
+} 
+
+.form :global(.categories__option) {
+    font-weight: 500;
+    font-size: 16px;
+
+    line-height: 1.5;
+    color: rgba(18, 20, 23, 0.5);
+}
+
+.form :global(.categories__option--is-focused) {
+    color: var(--green);
+    background-color: transparent;
+} 
+
+.verbContainer {
+    display: flex;
+    gap: 16px;
+}
+
+.label {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    visibility: hidden;
+}

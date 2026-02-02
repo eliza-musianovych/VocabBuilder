@@ -31,6 +31,12 @@
     align-items: center;
     margin-bottom: 166px;
 }
+
+.closeBtn {
+    width: 32px;
+    height: 32px;
+}
+
 .logoutBtn {
     margin-top: 28px;
     display: flex;
@@ -60,6 +66,11 @@
 
     .container {
         margin-bottom: 170px;
+    }
+
+    .closeBtn {
+        width: 40px;
+        height: 40px;
     }
 
     .img {

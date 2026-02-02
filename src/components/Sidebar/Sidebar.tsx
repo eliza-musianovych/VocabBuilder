@@ -56,8 +56,7 @@ export default function Sidebar ({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 >
                 <svg
-                width={32}
-                height={32}
+                className={css.closeBtn}
                 >
                     <use href='/sprite.svg#icon-x' />
                 </svg>

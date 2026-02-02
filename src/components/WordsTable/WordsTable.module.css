@@ -1,0 +1,21 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.thead {
+    background: rgba(133, 170, 159, 0.1);
+}
+
+.tbody {
+    background: var(--white);
+}
+
+.th {
+    padding: 16px 14px;
+}

@@ -4,6 +4,7 @@
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -33,7 +34,35 @@
     width: 19px;
 }
 
+@media screen and (min-width: 768px) {
+    .header {
+        height: 88px;
+        padding: 20px 32px;
+    }
+
+    .container {
+       gap: 28px;          
+    }
+
+    .burgerBtn {
+        width: 40px;
+        height: 28px;
+    }
+
+    .burgerBtn span {
+        border: 3px solid var(--black);
+        width: 33px;
+    }
+
+    .burgerBtn span:nth-child(2) {
+        width: 24px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
+    .header {
+        padding: 20px 100px;
+    }
     .burgerBtn {
         display: none;
     }

@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 export default function Logo () {
     return (
-        <div className={css.logo}>
+        <div>
             <NavLink
             to={'/dictionary'}
+            className={css.logo}
             >
                 <svg
                 className={css.icon}

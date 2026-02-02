@@ -28,3 +28,17 @@
     background-color: var(--green);
 }
 
+@media screen and (min-with:768px) {
+    .container {
+        gap: 16px;
+    }
+
+    .userName {
+       font-size: 20px; 
+    }
+
+    .userIcon {
+        width: 48px;
+        height: 48px;
+    }
+}

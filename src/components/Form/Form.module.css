@@ -36,7 +36,10 @@
     width: 100%;
 }
 
-.formElement:hover {
+.formElement:hover,
+.formElement:active,
+.formElement:focus {
+    outline: none;
     border-color: var(--green);
 }
 

@@ -10,7 +10,7 @@ export default function UserNav ({ type }: UserNavProps) {
     const isHeader = type === 'header';
 
     return (
-        <nav className={css.nav}>
+        <nav className={clsx(isHeader && css.nav)}>
             <ul className={clsx(css.navList, isHeader && css.headerNav)}>
                 <li>
                     <NavLink
